@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -10,9 +10,30 @@ import FirstGifts from './components/firstGifts';
 import Waitlist from './components/Waitlist';
 
 
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
+
+
+
+
 const Stack = createStackNavigator();
 
 export default function App() {
+  const [fontLoaded, setFontLoaded] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const fetchFonts = async () => {
+    await Font.loadAsync({
+      'dancing-script-regular': require('./assets/font/DancingScript-Regular.ttf'),
+      'dancing-script-bold': require('./assets/font/DancingScript-Bold.ttf'),
+    });
+    setFontsLoaded(true);
+  };
+
+  if (!fontLoaded) {
+    fetchFonts().then(() => {
+      setFontLoaded(true);
+    });
+  }else{
   return (
     <>
     <StatusBar backgroundColor={'#EDD3C4'} barStyle="light-content" />
@@ -26,9 +47,12 @@ export default function App() {
             headerStyle: {
               backgroundColor: '#EDD3C4',
             },
-            fontfamily: 'DancingScript',
             title: 'GetGift',
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'dancing-script-regular',
+              fontSize: 40,
+            },
           }}
         />
         <Stack.Screen
@@ -39,6 +63,10 @@ export default function App() {
               backgroundColor: '#EDD3C4',
             },
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'dancing-script-regular',
+              fontSize: 30,
+            },
           }}
         />
         <Stack.Screen
@@ -50,6 +78,10 @@ export default function App() {
             },
             title: 'Gifts',
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'dancing-script-regular',
+              fontSize: 30,
+            },
           }}
         />
         <Stack.Screen
@@ -61,6 +93,10 @@ export default function App() {
             },
             title: 'Gifts',
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'dancing-script-regular',
+              fontSize: 30,
+            },
           }}
         />
         <Stack.Screen
@@ -72,6 +108,10 @@ export default function App() {
             },
             title: 'Join our Waitlist',
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'dancing-script-regular',
+              fontSize: 30,
+            },
           }}
         />
         
@@ -79,6 +119,7 @@ export default function App() {
     </NavigationContainer>
     </>
   );
+  }
 }
 
 const styles = StyleSheet.create({

@@ -3,6 +3,15 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import  Slider  from '@react-native-community/slider'
 import { useNavigation } from '@react-navigation/native';
 
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
+
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'dancing-script-regular': require('../assets/font/DancingScript-Regular.ttf'),
+    'dancing-script-bold': require('../assets/font/DancingScript-Bold.ttf'),
+  });
+};
 
 
 const HomeScreen = () => {
@@ -65,7 +74,7 @@ const HomeScreen = () => {
       <Text style={styles.h1}>Occasion </Text>
       <View style={styles.optionsContainer}>
         <TouchableOpacity onPress={() => handleOccasionPress('Party')}>
-          <Image source={require('../assets/img/party.png')} style={[styles.optionImage, occasion === 'Party' && styles.imageWrapperSelected]} />
+          <Image source={require('../assets/img/christmas.png')} style={[styles.optionImage, occasion === 'Party' && styles.imageWrapperSelected]} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleOccasionPress('Birthday')}>
           <Image source={require('../assets/img/birthday.png')} style={[styles.optionImage, occasion === 'Birthday' && styles.imageWrapperSelected]} />
@@ -143,7 +152,7 @@ const styles = StyleSheet.create({
     color: '#EDD3C4',
     //make a line break
     lineBreakMode: 'anywhere',
-    fontFamily:'dancing-bold',
+    //fontFamily: 'dancing-script-bold'
     
 
     },
