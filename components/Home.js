@@ -90,14 +90,11 @@ const HomeScreen = () => {
         step={5}
         value={Math.floor(value)}
         onValueChange={setValue}
-        thumbTintColor="#7765E3"
+        thumbTintColor="#C8ADC0"
         minimumTrackTintColor="#EDD3C4"
         maximumTrackTintColor="#EDD3C4"
 
       />
-
-
-
       </View>
 
 
@@ -136,7 +133,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   button: {
-    backgroundColor: '#7765E3',
+    backgroundColor: '#C8ADC0',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
@@ -157,7 +154,7 @@ const styles = StyleSheet.create({
 
     },
     imageWrapperSelected: {
-        backgroundColor: '#7765E3',
+        backgroundColor: '#C8ADC0',
       },
 });
 

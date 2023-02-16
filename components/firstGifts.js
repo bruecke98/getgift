@@ -44,7 +44,7 @@ const HomeScreen = () => {
             <View style={styles.container1}>
         
                 <Text style={styles.price}>$40</Text>
-                <Image source={require('../assets/img/gift/toy1.png')} style={styles.image} />
+                <Image source={require('../assets/img/gift/toy8.png')} style={styles.image} />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
                     <Text style={styles.buttonText}><AntDesign  name="delete" size={24} color="#000" /></Text>
@@ -76,7 +76,7 @@ const HomeScreen = () => {
             <View style={styles.container1}>
         
                 <Text style={styles.price}>$24.99</Text>
-                <Image source={require('../assets/img/gift/toy2.png')} style={styles.image} />
+                <Image source={require('../assets/img/gift/toy1.png')} style={styles.image} />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
                     <Text style={styles.buttonText}><AntDesign  name="delete" size={24} color="#000" /></Text>
@@ -89,7 +89,7 @@ const HomeScreen = () => {
             <View style={styles.container1}>
         
                 <Text style={styles.price}>$39.99</Text>
-                <Image source={require('../assets/img/gift/toy3.png')} style={styles.image} />
+                <Image source={require('../assets/img/gift/toy7.png')} style={styles.image} />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
                     <Text style={styles.buttonText}><AntDesign  name="delete" size={24} color="#000" /></Text>
@@ -174,8 +174,8 @@ const styles = StyleSheet.create({
         elevation: 5,
       },
       image: {
-        width: 100,
-        height: 100,
+        width: 120,
+        height: 120,
         marginBottom: 20 
       },
       price: {
@@ -190,14 +190,15 @@ const styles = StyleSheet.create({
       deleteButton: {
         backgroundColor: '#C8ADC0',
         borderRadius: 5,
-        padding: 10,
+        padding: 7,
         marginRight: 10,
+        left: 5,
       },
       shopButton: {
         backgroundColor: '#7765E3',
         borderRadius: 5,
-        padding: 10,
-        right: -20,
+        padding: 7,
+        right: -40,
       },
       buttonText: {
         color: '#fff',

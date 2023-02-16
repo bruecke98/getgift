@@ -51,7 +51,7 @@ export default function App() {
             headerTitleAlign: 'center',
             headerTitleStyle: {
               fontFamily: 'dancing-script-regular',
-              fontSize: 40,
+              fontSize: 32,
             },
           }}
         />

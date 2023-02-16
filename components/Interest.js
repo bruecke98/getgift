@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image, BackHandler } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image, BackHandler, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+
+
+import SocialMedia from './SocialMedia';
 
 function InterestsScreen() {
   const navigation = useNavigation();
@@ -22,59 +26,95 @@ function InterestsScreen() {
     navigation.navigate('FirstGifts', { clicks });
   };
 
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
+        <ScrollView horizontal>
         <View>
-        <TouchableOpacity onPress={() => handlePress('Sport')}>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('Sport')}>
           <Text style={[styles.titles, 'Sport' in clicks && styles.titlesClicked]}>Sport</Text>
           <Image style={[styles.image,  'Sport' in clicks && styles.imageWrapperSelected ]}  source={require('../assets/img/sport.jpg')} />
         </TouchableOpacity>
         </View>
         <View>
-        <TouchableOpacity onPress={() => handlePress('toys')}>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('toys')}>
           <Text style={[styles.titles, 'toys' in clicks && styles.titlesClicked]}>Toys</Text>
 
           <Image style={[styles.image,  'toys' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/toys.jpg')} />
         </TouchableOpacity>
         </View>
-      </View>
-
-      <View style={styles.imageContainer2}>
-        <TouchableOpacity onPress={() => handlePress('childbook')}>
-          <Text style={[styles.titles, 'childbook' in clicks && styles.titlesClicked]}>Books</Text>
-
-          <Image style={[styles.image,  'childbook' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/childbook.webp')} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handlePress('sweets')}>
-          <Text style={[styles.titles, 'sweets' in clicks && styles.titlesClicked]}>Sweets</Text>
-
-          <Image style={[styles.image,  'sweets' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/sweets.jpg')} />
-        </TouchableOpacity>
-      </View>
-      
-      <View style={styles.imageContainer2}>
-        <TouchableOpacity onPress={() => handlePress('Schleich')}>
-          <Text style={[styles.titles, 'Schleich' in clicks && styles.titlesClicked]}>Schleich</Text>
-
-          <Image style={[styles.image,  'Schleich' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/schleich.jpg')} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handlePress('techChild')}>
+        <View>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('techChild')}>
           <Text style={[styles.titles, 'techChild' in clicks && styles.titlesClicked]}>Tech</Text>
 
           <Image style={[styles.image,  'techChild' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/techChild.jpg')} />
         </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('childbook')}>
+          <Text style={[styles.titles, 'childbook' in clicks && styles.titlesClicked]}>Books</Text>
+
+          <Image style={[styles.image,  'childbook' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/childbook.webp')} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('sweets')}>
+          <Text style={[styles.titles, 'sweets' in clicks && styles.titlesClicked]}>Sweets</Text>
+
+          <Image style={[styles.image,  'sweets' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/sweets.jpg')} />
+        </TouchableOpacity>
+        <View>
+        <TouchableOpacity style={styles.t} onPress={() => handlePress('Schleich')}>
+          <Text style={[styles.titles, 'Schleich' in clicks && styles.titlesClicked]}>Schleich</Text>
+
+          <Image style={[styles.image,  'Schleich' in clicks && styles.imageWrapperSelected ]} source={require('../assets/img/schleich.jpg')} />
+        </TouchableOpacity>
+        </View>
+        </ScrollView>
+      </View>
+
+
+      <View style={styles.SocialMed}> 
+      <View style={{ padding: 10, backgroundColor: 'grey', margin:10, borderRadius: 10 , shadowRadius: 10, shadowColor: "#fff",}}>
+
+        <Image source={require("../assets/img/LogoI.webp")}  style={{color:"#1DA1F2", backgroundColor: 'grey', width: 40, height: 40, padding: 10}} />
+        </View>
+
+        <View style={{ padding: 10, backgroundColor: 'white', margin:10 , borderRadius: 10}}>
+
+        <Image source={require("../assets/img/tiktok.png")}  style={{color:"#1DA1F2", backgroundColor: 'white', width: 40, height: 40}} />
+        </View>
+
+        <View style={{ padding: 10, backgroundColor: 'white', margin:10, borderRadius: 10}}>
+          <Image source={require("../assets/img/face.png")}  style={{color:"#1DA1F2", backgroundColor: 'white', width: 40, height: 40}} />
+        </View>
+   
+        </View>
+
+      <View style={styles.imageContainer3}>
+        <SocialMedia />
       </View>
       
+
+
+
       <TouchableOpacity style={styles.button} onPress={handlePressGift}>
         <Text style={styles.buttonText}>Go to Gifts</Text>
       </TouchableOpacity>
-      <Text style={styles.clicksText}>Clicks: {JSON.stringify(clicks)}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  SocialMed:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '70%',
+    flex: 1,
+    top: -10,
+  },
+  t:{
+    marginRight: 20,
+  },
   titles:{
     fontSize: 24,
     fontWeight: 'bold',
@@ -103,9 +143,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '80%',
+    width: '95%',
     flex: 1,
     flexDirection: 'row',
+    top: 30,
     
   },
   imageContainer2: {
@@ -113,26 +154,40 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '80%',
-    marginTop: 0,
+    top: -20,
+    marginTop: -20,
+    flex: 1,
+    flexDirection: 'row',
+  },
+  imageContainer3: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '80%',
+    top: -50,
+    marginTop: -100,
     flex: 1,
     flexDirection: 'row',
   },
   image: {
-    width: 120,
-    height: 120,
+    width: 110,
+    height: 110,
     borderRadius: 50,
     flexDirection: 'row',
     
   },
   clicksText: {
     fontSize: 16,
-    marginTop: 20,
+    marginTop: 10,
   },
   button: {
     backgroundColor: '#7765E3',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
+    width: 200,
+    alignItems: 'center',
+    top: -60,
   },
   buttonText: {
     fontSize: 18,
