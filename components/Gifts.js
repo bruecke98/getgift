@@ -42,7 +42,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
 
-        <TreeList entries={['Child', 'Boy', 'Birthday', '<45€', 'Toys','Lego', 'Dinosaur', 'T-Rex']}/>
+        <TreeList entries={['Child', 'Boy', 'Birthday', '<45€', 'Toys','Instagram','Lego', 'Dinosaur', 'T-Rex']}/>
 
 
         <View style={styles.containerImg}>
@@ -50,7 +50,7 @@ const HomeScreen = () => {
             <View style={styles.container1}>
         
                 <Text style={styles.price}>$19.99</Text>
-                <Image source={require('../assets/img/gift/dino4.png')} style={styles.image} />
+                <Image source={require('../assets/img/gift/dino7.png')} style={styles.image} />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
                     <Text style={styles.buttonText}><AntDesign  name="delete" size={24} color="#000" /></Text>
@@ -82,7 +82,7 @@ const HomeScreen = () => {
             <View style={styles.container1}>
         
                 <Text style={styles.price}>$12.99</Text>
-                <Image source={require('../assets/img/gift/dino3.png')} style={styles.image} />
+                <Image source={require('../assets/img/gift/dino8.png')} style={styles.image} />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
                     <Text style={styles.buttonText}><AntDesign  name="delete" size={24} color="#000" /></Text>
@@ -116,12 +116,17 @@ const HomeScreen = () => {
   );
 };
 
+
+//dark 787cd1
+//medium
+//light bbbde8
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#080708',
+        backgroundColor: '#0c1014',
       },
       optionsContainer: {
         flexDirection: 'row',
@@ -167,7 +172,7 @@ const styles = StyleSheet.create({
           },
     
           container1: {
-            backgroundColor: 'white',
+            backgroundColor: '#bbbde8',
             borderRadius: 5,
             padding: 10,
             margin: 10,
@@ -183,7 +188,9 @@ const styles = StyleSheet.create({
           image: {
             width: 120,
             height: 120,
-            marginBottom: 20 
+            marginBottom: 20,
+            borderRadius: 5,
+        opacity: 0.9,
           },
           price: {
             fontSize: 18,
@@ -196,17 +203,17 @@ const styles = StyleSheet.create({
             width: 130
           },
           deleteButton: {
-            backgroundColor: '#C8ADC0',
+            backgroundColor: '#8064A2',
             borderRadius: 5,
             padding: 7,
             marginRight: 10,
             left: 5,
           },
           shopButton: {
-            backgroundColor: '#7765E3',
+            backgroundColor: '#787cd1',
             borderRadius: 5,
             padding: 7,
-            right: -40,
+            right: -40, 
           },
           buttonText: {
             color: '#fff',
