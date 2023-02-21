@@ -37,7 +37,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
         
-        <TreeList entries={['Child', 'Boy', 'Birthday', '<45€', 'Toys']}/>
+        <TreeList entries={['Child', 'Boy', 'Birthday', '<45€', 'Toys', 'Instagram']}/>
 
         <View style={styles.containerImg}>
                 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#080708',
+    backgroundColor: '#0c1014',
   },
   optionsContainer: {
     flexDirection: 'row',
@@ -157,10 +157,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        
       },
 
       container1: {
-        backgroundColor: '#fff',
+        backgroundColor: '#bbbde8',
         borderRadius: 5,
         padding: 10,
         margin: 10,
@@ -176,7 +177,9 @@ const styles = StyleSheet.create({
       image: {
         width: 120,
         height: 120,
-        marginBottom: 20 
+        marginBottom: 20,
+        borderRadius: 5,
+        opacity: 0.9,
       },
       price: {
         fontSize: 18,
@@ -188,14 +191,14 @@ const styles = StyleSheet.create({
         width: 130,
       },
       deleteButton: {
-        backgroundColor: '#C8ADC0',
+        backgroundColor: '#8064A2',
         borderRadius: 5,
         padding: 7,
         marginRight: 10,
         left: 5,
       },
       shopButton: {
-        backgroundColor: '#7765E3',
+        backgroundColor: '#787cd1',
         borderRadius: 5,
         padding: 7,
         right: -40,

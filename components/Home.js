@@ -90,9 +90,9 @@ const HomeScreen = () => {
         step={5}
         value={Math.floor(value)}
         onValueChange={setValue}
-        thumbTintColor="#C8ADC0"
-        minimumTrackTintColor="#EDD3C4"
-        maximumTrackTintColor="#EDD3C4"
+        thumbTintColor="#bbbde8"
+        minimumTrackTintColor="#bbbde8"
+        maximumTrackTintColor="#bbbde8"
 
       />
       </View>
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#080708',
+    backgroundColor: '#0c1014',
   },
   optionsContainer: {
     flexDirection: 'row',
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   slide: {
+    transform: [{ scaleY: 2.5 }],
     width: 200,
     height: 40,
     backgroundColor: 'transparent',
@@ -129,24 +130,26 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     marginHorizontal: 9,
-    backgroundColor: '#EDD3C4',
+    backgroundColor: '#bbbde8',
     borderRadius: 40,
   },
   button: {
-    backgroundColor: '#C8ADC0',
+    backgroundColor: '#787cd1',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
+    width: 320,
+    alignItems: 'center',
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: '#EDD3C4',
+    color: '#00171f',
   },
   h1: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#EDD3C4',
+    color: '#c9dcec',
     //make a line break
     lineBreakMode: 'anywhere',
     //fontFamily: 'dancing-script-bold'
@@ -154,8 +157,14 @@ const styles = StyleSheet.create({
 
     },
     imageWrapperSelected: {
-        backgroundColor: '#C8ADC0',
+        backgroundColor: '#787cd1',
       },
 });
 
 export default HomeScreen;
+
+
+//dark 787cd1
+//medium bbbde8
+//light  c9dcec
+//container 0c1014

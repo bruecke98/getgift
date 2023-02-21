@@ -38,7 +38,7 @@ const SocialMedia = () => {
     <>
    
     <View style={[styles.container, isFocused && styles.focused]}>
-    <Image source={require("../assets/img/insta.webp")}  style={{color:"#1DA1F2", backgroundColor: 'white', width: 50, height: 50, padding: 10}} />
+    <Image source={require("../assets/img/insta.webp")}  style={{backgroundColor: '#c9dcec', width: 40, height: 40, padding: 10}} />
       <TextInput
         style={styles.input}
         placeholder="@tommyNephew"
@@ -65,29 +65,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 8,
-    backgroundColor: '#F2F2F2',
+    backgroundColor: '#c9dcec',
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: '#ccc',
     borderRadius: 8,
     margin: 10,
   },
   focused: {
-    backgroundColor: '#fff',
+    backgroundColor: '#c9dcec',
+    
   },
   input: {
     marginLeft: 16,
     flex: 1,
-    color: '#000000',
+    color: '#0c1014',
     fontSize: 20,
   },
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#c9dcec',
     borderRadius: 8,
     margin: 10,
   },

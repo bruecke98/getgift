@@ -29,10 +29,10 @@ const styles = StyleSheet.create({
   },
   text: {
     borderWidth: 1,
-    borderColor: '#EDD3C4',
+    borderColor: '#bbbde8',
     padding: 10,
     margin: 5,
-    color: '#EDD3C4',
+    color: '#c9dcec',
     borderRadius: 10,
 
   },

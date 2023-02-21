@@ -73,18 +73,18 @@ function InterestsScreen() {
 
 
       <View style={styles.SocialMed}> 
-      <View style={{ padding: 10, backgroundColor: 'grey', margin:10, borderRadius: 10 , shadowRadius: 10, shadowColor: "#fff",}}>
+      <View style={{ padding: 10, backgroundColor: '#787cd1', margin:10, borderRadius: 10 , shadowRadius: 10, shadowColor: "#fff",}}>
 
-        <Image source={require("../assets/img/LogoI.webp")}  style={{color:"#1DA1F2", backgroundColor: 'grey', width: 40, height: 40, padding: 10}} />
+        <Image source={require("../assets/img/LogoI.webp")}  style={{backgroundColor: '#787cd1', width: 40, height: 40, padding: 10}} />
         </View>
 
-        <View style={{ padding: 10, backgroundColor: 'white', margin:10 , borderRadius: 10}}>
+        <View style={{ padding: 10, backgroundColor: '#c9dcec', margin:10 , borderRadius: 10}}>
 
-        <Image source={require("../assets/img/tiktok.png")}  style={{color:"#1DA1F2", backgroundColor: 'white', width: 40, height: 40}} />
+        <Image source={require("../assets/img/tiktok.png")}  style={{color:"#1DA1F2", backgroundColor: '#c9dcec', width: 40, height: 40}} />
         </View>
 
-        <View style={{ padding: 10, backgroundColor: 'white', margin:10, borderRadius: 10}}>
-          <Image source={require("../assets/img/face.png")}  style={{color:"#1DA1F2", backgroundColor: 'white', width: 40, height: 40}} />
+        <View style={{ padding: 10, backgroundColor: '#c9dcec', margin:10, borderRadius: 10}}>
+          <Image source={require("../assets/img/f9.png")}  style={{color:"#1DA1F2", backgroundColor: '#c9dcec', width: 40, height: 40}} />
         </View>
    
         </View>
@@ -119,25 +119,28 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#EDD3C4',
+    color: '#c9dcec',
     lineBreakMode: 'anywhere',
     left: 5,
     top: 15,
   },
   titlesClicked:{
-    color: '#7765E3'
+    color: '#787cd1',
+  },
+  imageClicked:{
+    opacity: 0.5,
   },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#0c1014',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: 'white',
+    color: '#c9dcec',
   },
   imageContainer: {
     flexDirection: 'row',
@@ -174,6 +177,9 @@ const styles = StyleSheet.create({
     height: 110,
     borderRadius: 50,
     flexDirection: 'row',
+    backgroundColor: '#787cd1',
+    opacity: 0.5,
+
     
   },
   clicksText: {
@@ -181,21 +187,23 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   button: {
-    backgroundColor: '#7765E3',
+    backgroundColor: '#787cd1',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
-    width: 200,
+    width: 320,
     alignItems: 'center',
     top: -60,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#00171f',
   },
   imageWrapperSelected: {
     borderRadius: 10,
+    opacity: 0.9,
+    backgroundColor: '#c9dcec'
     
   },
 });
