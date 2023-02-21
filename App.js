@@ -24,7 +24,7 @@ export default function App() {
   const fetchFonts = async () => {
     await Font.loadAsync({
       'dancing-script-regular': require('./assets/font/DancingScript-Regular.ttf'),
-      'dancing-script-bold': require('./assets/font/DancingScript-Bold.ttf'),
+      'dancing-script-bold': require('./assets/font/Roboto-Bold.ttf'),
     });
     setFontsLoaded(true);
   };
@@ -36,7 +36,7 @@ export default function App() {
   }else{
   return (
     <>
-    <StatusBar backgroundColor={'#EDD3C4'} barStyle="light-content" />
+    <StatusBar backgroundColor={'#bbbde8'} barStyle="light-content" />
     
     <NavigationContainer>
       <Stack.Navigator>
@@ -45,12 +45,12 @@ export default function App() {
           component={Home}
           options={{
             headerStyle: {
-              backgroundColor: '#EDD3C4',
+              backgroundColor: '#bbbde8',
             },
             title: 'GetGift',
             headerTitleAlign: 'center',
-            headerTitleStyle: {
-              fontFamily: 'dancing-script-regular',
+            headerTitleStyle: { 
+              fontFamily: 'dancing-script-bold',
               fontSize: 32,
             },
           }}
@@ -59,12 +59,13 @@ export default function App() {
           name="Interests"
           component={Interest}
           options={{
+            title: 'Social Media',
             headerStyle: {
-              backgroundColor: '#EDD3C4',
+              backgroundColor: '#bbbde8',
             },
             headerTitleAlign: 'center',
             headerTitleStyle: {
-              fontFamily: 'dancing-script-regular',
+              fontFamily: 'dancing-script-bold',
               fontSize: 30,
             },
           }}
@@ -74,12 +75,12 @@ export default function App() {
           component={Gifts}
           options={{
             headerStyle: {
-              backgroundColor: '#EDD3C4',
+              backgroundColor: '#bbbde8',
             },
             title: 'Gifts',
             headerTitleAlign: 'center',
             headerTitleStyle: {
-              fontFamily: 'dancing-script-regular',
+              fontFamily: 'dancing-script-bold',
               fontSize: 30,
             },
           }}
@@ -89,12 +90,12 @@ export default function App() {
           component={FirstGifts}
           options={{
             headerStyle: {
-              backgroundColor: '#EDD3C4',
+              backgroundColor: '#bbbde8',
             },
             title: 'Gifts',
             headerTitleAlign: 'center',
             headerTitleStyle: {
-              fontFamily: 'dancing-script-regular',
+              fontFamily: 'dancing-script-bold',
               fontSize: 30,
             },
           }}
@@ -104,12 +105,12 @@ export default function App() {
           component={Waitlist}
           options={{
             headerStyle: {
-              backgroundColor: '#EDD3C4',
+              backgroundColor: '#bbbde8',
             },
             title: 'Join our Waitlist',
             headerTitleAlign: 'center',
             headerTitleStyle: {
-              fontFamily: 'dancing-script-regular',
+              fontFamily: 'dancing-script-bold',
               fontSize: 30,
             },
           }}
@@ -139,3 +140,9 @@ const styles = StyleSheet.create({
     color: 'blue',
   },
 });
+
+
+//#302b70 dunkel lila
+//#bbbde8 lila mittel
+
+
