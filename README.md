@@ -16,3 +16,6 @@ lots of interest in a gift generator
 ## Day 4 - Funding
 integrate Social Media into the App
 think big: getGift -> getHoliday, getTech, ...
+
+In this repository you find a demonstration of the getgift App. 
+getgift makes it easy to find the perfect gift for your loved ones!
